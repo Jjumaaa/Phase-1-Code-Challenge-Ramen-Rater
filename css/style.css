@@ -3,3 +3,13 @@
     font-family: Arial, Helvetica, sans-serif;
     box-sizing: border-box;
   }
+
+  body {
+    padding: 1rem;
+    text-align: center;
+    background-color: burlywood;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
