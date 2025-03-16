@@ -85,6 +85,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
         document.querySelector('#ramen').appendChild(newImg);
 
-
+        newRamenForm.reset();
 
 });
