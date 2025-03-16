@@ -32,4 +32,9 @@
     transform: scale(1.1);
   }
 
-  
+  #ramen img {
+    flex: 0 1 auto;
+    height: 150px;
+    margin-right: 0.5rem;
+    transform: scale(1.1);
+  }
