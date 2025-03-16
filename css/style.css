@@ -22,3 +22,14 @@
     margin: auto;
     
   }
+
+  #ramen {
+    display: flex;
+    margin: 1rem 0;
+    max-width: calc(100vw - 2rem);
+    flex-wrap: wrap;
+    justify-content: center;
+    transform: scale(1.1);
+  }
+
+  
