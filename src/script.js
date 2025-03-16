@@ -45,4 +45,14 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     ];
 
+    function displayRamenDetails(index) {
+        const ramen = ramenData[index];
+        ramenName.textContent = ramen.name;
+        ramenRestaurant.textContent = ramen.restaurant;
+        ratingDisplay.textContent = ramen.rating;
+        commentDisplay.textContent = ramen.comment;
+        document.querySelector('.holder').src = ramen.image;
+    }
+
+
 });
