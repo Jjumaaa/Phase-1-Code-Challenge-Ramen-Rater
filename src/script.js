@@ -1,3 +1,5 @@
+// 
+
 document.addEventListener('DOMContentLoaded', () => {
 
     const ramenImages = document.querySelectorAll('#ramen img');
