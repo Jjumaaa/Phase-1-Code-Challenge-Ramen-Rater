@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     ramenImages.forEach((img, index) => {
         img.addEventListener('click', () => displayRamenDetails(index));
-    });
+    }); 
 
 
 
