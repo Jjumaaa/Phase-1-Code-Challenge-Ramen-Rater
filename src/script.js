@@ -67,6 +67,14 @@ document.addEventListener('DOMContentLoaded', () => {
         const rating = document.querySelector('#new-rating').value;
         const comment = document.querySelector('#new-comment').value;
 
+        const newRamen = {
+            name,
+            restaurant,
+            image,
+            rating,
+            comment
+        };
+
 
 
 });
