@@ -13,3 +13,12 @@
     justify-content: center;
     align-items: center;
   }
+
+  header {
+    padding: 0.5rem;
+    width: 100%;
+    color: gold;
+    background-color: black;
+    margin: 0.5rem 0;
+    
+  }
