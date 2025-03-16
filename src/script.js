@@ -61,6 +61,12 @@ document.addEventListener('DOMContentLoaded', () => {
     newRamenForm.addEventListener('submit', (e) => {
         e.preventDefault()});
 
+        const name = document.querySelector('#new-name').value;
+        const restaurant = document.querySelector('#new-restaurant').value;
+        const image = document.querySelector('#new-image').value;
+        const rating = document.querySelector('#new-rating').value;
+        const comment = document.querySelector('#new-comment').value;
+
 
 
 });
