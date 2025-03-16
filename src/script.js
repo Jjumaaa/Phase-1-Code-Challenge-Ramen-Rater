@@ -75,6 +75,8 @@ document.addEventListener('DOMContentLoaded', () => {
             comment
         };
 
+        ramenData.push(newRamen);
+
 
 
 });
