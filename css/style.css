@@ -54,3 +54,8 @@ left:300px;
 padding: 0.25rem 5rem 0.25rem 1rem;
 background-color: rgba(255, 255, 255, 0.8);
 }
+
+.name{
+    bottom: 60px;
+    color: green;
+  }
