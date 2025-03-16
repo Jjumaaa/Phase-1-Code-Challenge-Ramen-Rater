@@ -1,4 +1,4 @@
-// 
+// Done with JS:)
 
 document.addEventListener('DOMContentLoaded', () => {
 
