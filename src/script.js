@@ -77,6 +77,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
         ramenData.push(newRamen);
 
+        const newImg = document.createElement('img');
+        newImg.src = newRamen.image;
+        newImg.alt = newRamen.name;
+
 
 
 });
