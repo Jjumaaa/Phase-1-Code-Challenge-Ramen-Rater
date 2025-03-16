@@ -203,6 +203,4 @@ This project is a simple web application called "Ramen Rater" that allows users 
 ### `newRamenForm.reset();`
 - Resets the form fields after submission.
 
----
-
-This README provides a comprehensive explanation of the code. Let me know if you need further clarification! 🍜
+END!!
