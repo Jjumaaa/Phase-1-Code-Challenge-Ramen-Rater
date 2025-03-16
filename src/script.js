@@ -7,5 +7,42 @@ document.addEventListener('DOMContentLoaded', () => {
     const commentDisplay = document.querySelector('#comment-display');
     const newRamenForm = document.querySelector('#new-ramen');
 
+    const ramenData = [
+        {
+            name: 'Gyukotsu',
+            restaurant: 'Ichiran',
+            image: 'assets/ramen/gyukotsu.jpg',
+            rating: 8,
+            comment: 'Mouth-watering.',
+        },
+        {
+            name: 'Kojiro',
+            restaurant: 'Menya',
+            image: 'assets/ramen/kojiro.jpg',
+            rating: 6,
+            comment: 'Very flavorful.',
+        },
+        {
+            name: 'Naruto',
+            restaurant: 'Ramen Nagi',
+            image: 'assets/ramen/naruto.jpg',
+            rating: 7,
+            comment: 'Yummy.',
+        },
+        {
+            name: 'Nirvana',
+            restaurant: 'Ramen-ya',
+            image: 'assets/ramen/nirvana.jpg',
+            rating: 8,
+            comment: 'Sweet and tasty.',
+        },
+        {
+            name: 'Shoyu',
+            restaurant: 'Ichiran',
+            image: 'assets/ramen/shoyu.jpg',
+            rating: 9,
+            comment: 'Delicious!',
+        }
+    ];
 
 });
