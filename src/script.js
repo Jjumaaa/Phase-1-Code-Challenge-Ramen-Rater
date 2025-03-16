@@ -83,6 +83,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
         newImg.addEventListener('click', () => displayRamenDetails(ramenData.length - 1));
 
+        document.querySelector('#ramen').appendChild(newImg);
+
 
 
 });
