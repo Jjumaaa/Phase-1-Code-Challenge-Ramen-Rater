@@ -81,6 +81,8 @@ document.addEventListener('DOMContentLoaded', () => {
         newImg.src = newRamen.image;
         newImg.alt = newRamen.name;
 
+        newImg.addEventListener('click', () => displayRamenDetails(ramenData.length - 1));
+
 
 
 });
