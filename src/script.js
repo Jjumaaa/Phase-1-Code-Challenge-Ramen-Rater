@@ -56,7 +56,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     ramenImages.forEach((img, index) => {
         img.addEventListener('click', () => displayRamenDetails(index));
-    }); 
+    });
+
+    newRamenForm.addEventListener('submit', (e) => {
+        e.preventDefault()});
 
 
 
