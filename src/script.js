@@ -54,5 +54,10 @@ document.addEventListener('DOMContentLoaded', () => {
         document.querySelector('.holder').src = ramen.image;
     }
 
+    ramenImages.forEach((img, index) => {
+        img.addEventListener('click', () => displayRamenDetails(index));
+    });
+
+
 
 });
