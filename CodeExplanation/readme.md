@@ -105,6 +105,9 @@ This project is a simple web application called "Ramen Rater" that allows users 
 ###### `<input type="submit" value="Create" />`
 - A submit button to add the new ramen to the list.
 
+###### `<has a footer with a logo and a message/>`
+- A footer with a logo and a message
+
 ---
 
 ## CSS Styling

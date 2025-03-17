@@ -90,7 +90,7 @@ background-color: rgba(255, 255, 255, 0.8);
     border: 1px solid white;
     background-color: black;
     cursor: pointer;
-    transition: all 5s;
+    transition: all 0.5s;
   }
   
   input[type="submit"]:active {
@@ -105,32 +105,7 @@ background-color: rgba(255, 255, 255, 0.8);
     background-color: black;
   }
 
-  @media (max-width: 768px) {
-  
-    #ramen {
-      transform: scale(1.0); 
-    }
-  
-    #ramen img {
-      height: 100px; 
-      margin: 0.25rem; 
-      transform: scale(1.0);
-    }
-  
-    .holder {
-      height: 250px;
-    }
-  
-    .name,
-    .restaurant {
-      position: static;
-      width: 100%; 
-      text-align: center;
-      padding: 0.5rem;
-      left: auto;
-    }
-  
-    form {
-      align-items: stretch;
-    }
+  footer {
+    background-color: black;
+    color: gold;
   }
