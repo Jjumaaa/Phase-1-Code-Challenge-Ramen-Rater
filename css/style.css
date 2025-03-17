@@ -87,7 +87,7 @@ background-color: rgba(255, 255, 255, 0.8);
   
   input[type="submit"] {
     color: white;
-    border: 1px solid red;
+    border: 1px solid wheat;
     background-color: black;
     cursor: pointer;
     transition: all 0.5s;
@@ -103,10 +103,31 @@ background-color: rgba(255, 255, 255, 0.8);
     margin: 0.5rem 0;
     color: whitesmoke;
     background-color: black;
-    border-color: red;
+    border-color: wheat;
   }
 
   footer {
     background-color: black;
     color: gold;
   }
+
+#ramen img {
+  flex: 0 1 auto;
+  height: 150px;
+  margin-right: 0.5rem;
+  transform: scale(1.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+#ramen img:hover {
+  animation: float 2s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+      transform: translateY(0) scale(1.1);
+  }
+  50% {
+      transform: translateY(-10px) scale(1.1);
+  }
+}
