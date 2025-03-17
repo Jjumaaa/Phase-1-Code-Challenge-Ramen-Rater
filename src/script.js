@@ -1,3 +1,9 @@
+const ramens = [
+    { id: 1, name: "Shoyu Ramen", restaurant: "Ichiran", image: "shoyu.jpg", rating: 5, comment: "Delicious!" },
+    { id: 2, name: "Miso Ramen", restaurant: "Menya", image: "miso.jpg", rating: 4, comment: "Very flavorful!" },
+    { id: 3, name: "Tonkotsu Ramen", restaurant: "Ramen-ya", image: "tonkotsu.jpg" }
+];
+
 // Done with JS:)
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -9,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const commentDisplay = document.querySelector('#comment-display');
     const newRamenForm = document.querySelector('#new-ramen');
 
-    const ramenData = [
+    let ramenData = [
         {
             name: 'Gyukotsu',
             restaurant: 'Ichiran',
@@ -47,12 +53,21 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     ];
 
+    // Add the 'ramens' array to the existing 'ramenData'
+    ramenData = ramenData.concat(ramens.map(ramen => ({
+        name: ramen.name,
+        restaurant: ramen.restaurant,
+        image: ramen.image,
+        rating: ramen.rating,
+        comment: ramen.comment
+    })));
+
     function displayRamenDetails(index) {
         const ramen = ramenData[index];
         ramenName.textContent = ramen.name;
         ramenRestaurant.textContent = ramen.restaurant;
-        ratingDisplay.textContent = ramen.rating;
-        commentDisplay.textContent = ramen.comment;
+        ratingDisplay.textContent = ramen.rating || 'N/A'; // Handle cases where rating might be undefined
+        commentDisplay.textContent = ramen.comment || '';   // Handle cases where comment might be undefined
         document.querySelector('.holder').src = ramen.image;
     }
 
@@ -61,7 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     newRamenForm.addEventListener('submit', (e) => {
-        e.preventDefault()});
+        e.preventDefault();
 
         const name = document.querySelector('#new-name').value;
         const restaurant = document.querySelector('#new-restaurant').value;
@@ -88,5 +103,11 @@ document.addEventListener('DOMContentLoaded', () => {
         document.querySelector('#ramen').appendChild(newImg);
 
         newRamenForm.reset();
+    });
+
+    // Initial display (optional - you might want to show the first ramen after loading)
+    if (ramenData.length > 0) {
+        displayRamenDetails(0);
+    }
 
 });
