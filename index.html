@@ -1,5 +1,3 @@
-<!--Done with HTML YAY!!-->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,57 +10,53 @@
     <link rel="website icon" type="png" href="assets/images/js-icon.png">
 </head>
 <body>
-
     <header>
         <h3>Ramen Rater</h3>
         <i class="fa-solid fa-bowl-food"></i>
-            <p>We Love Your Feedback</p>
+        <p>We Love Your Feedback</p>
     </header>
 
-        <main>
-            <div id="ramen">
+    <main>
+        <div id="ramen">
+            <img src="assets/images/Ramen/gyukotsu.jpg" alt="gyu">
+            <img src="assets/images/Ramen/kojiro.jpg" alt="ko">
+            <img src="assets/images/Ramen/naruto.jpg" alt="na">
+            <img src="assets/images/Ramen/nirvana.jpg" alt="ni">
+            <img src="assets/images/Ramen/shoyu.jpg" alt="sh">
+        </div>
 
-                <img src="assets/images/Ramen/gyukotsu.jpg" alt="gyu">
-                <img src="assets/images/Ramen/kojiro.jpg" alt="ko">
-                <img src="assets/images/Ramen/naruto.jpg" alt="na">
-                <img src="assets/images/Ramen/nirvana.jpg" alt="ni">
-                <img src="assets/images/Ramen/shoyu.jpg" alt="sh">
-                
-            </div>
+        <div id="place">
+            <img class="holder" src="assets/images/image-placeholder.jpg" alt="">
+            <h2 class="name">Ramen Name</h2>
+            <h3 class="restaurant">Restaurant Name</h3>
+        </div>
 
-            <div id="place">
-                <img class="holder" src="assets/images/image-placeholder.jpg" alt="">
-                <h2 class="name">Ramen Name</h2>
-                <h3 class="restaurant">Restaurant Name</h3>
-            </div>
-
-                    <h3>Rating:</h3>
-            <p>
+        <h3>Rating:</h3>
+        <p>
             <span id='rating-display'>Rating Goes Here</span> / 10
-            </p>
-            <h3>Comment:</h3>
-            <p id='comment-display'>Comment Goes Here (Be Nice)</p>
+        </p>
+        <h3>Comment:</h3>
+        <p id='comment-display'>Comment Goes Here (Be Nice)</p>
 
-            <form id="new-ramen">
-                <h4>Add New Ramen</h4>
-                <label for="name">Name: </label>
-                <input type="text" name="name" id="new-name" />
-                   <label for="restaurant">Restaurant: </label>
-                <input type="text" name="restaurant" id="new-restaurant" />
-                <label for="image">Image: </label>
-                <input type="text" name="image" id="new-image" />
-                <label for="rating">Rating: </label>
-                <input type="number" name="rating" id="new-rating" />
-                <label for="new-comment">Comment: </label>
-                <textarea name="new-comment" id="new-comment"></textarea>
-                <input type="submit" value="Create" />
-            </form>
+        <form id="new-ramen">
+            <h4>Add New Ramen</h4>
+            <label for="name">Name: </label>
+            <input type="text" name="name" id="new-name" />
+            <label for="restaurant">Restaurant: </label>
+            <input type="text" name="restaurant" id="new-restaurant" />
+            <label for="image">Image: </label>
+            <input type="text" name="image" id="new-image" />
+            <label for="rating">Rating: </label>
+            <input type="number" name="rating" id="new-rating" />
+            <label for="new-comment">Comment: </label>
+            <textarea name="new-comment" id="new-comment"></textarea>
+            <input type="submit" value="Create" />
+        </form>
+    </main>
 
-        </main>
-
-        <footer>
-            <i class="fa-solid fa-bowl-food"></i>
-            <p>We Love Your Feedback</p>
-        </footer>
+    <footer>
+        <i class="fa-solid fa-bowl-food"></i>
+        <p>We Love Your Feedback</p>
+    </footer>
 </body>
 </html>
