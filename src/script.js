@@ -53,7 +53,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     ];
 
-    // Add the 'ramens' array to the existing 'ramenData'
     ramenData = ramenData.concat(ramens.map(ramen => ({
         name: ramen.name,
         restaurant: ramen.restaurant,
@@ -66,8 +65,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const ramen = ramenData[index];
         ramenName.textContent = ramen.name;
         ramenRestaurant.textContent = ramen.restaurant;
-        ratingDisplay.textContent = ramen.rating || 'N/A'; // Handle cases where rating might be undefined
-        commentDisplay.textContent = ramen.comment || '';   // Handle cases where comment might be undefined
+        ratingDisplay.textContent = ramen.rating || 'N/A'; 
+        commentDisplay.textContent = ramen.comment || '';  
         document.querySelector('.holder').src = ramen.image;
     }
 
@@ -105,7 +104,7 @@ document.addEventListener('DOMContentLoaded', () => {
         newRamenForm.reset();
     });
 
-    // Initial display (optional - you might want to show the first ramen after loading)
+    
     if (ramenData.length > 0) {
         displayRamenDetails(0);
     }
