@@ -44,7 +44,6 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     ];
   
-    // Function to display ramen details
     function displayRamenDetails(index) {
       const ramen = ramenData[index];
       ramenName.textContent = ramen.name;
@@ -54,9 +53,8 @@ document.addEventListener('DOMContentLoaded', () => {
       document.querySelector('.holder').src = ramen.image;
     }
   
-    // Function to create and append ramen images
     function loadRamenImages() {
-      ramenContainer.innerHTML = ''; // Clear the container before reloading
+      ramenContainer.innerHTML = '';
   
       ramenData.forEach((ramen, index) => {
         const img = document.createElement('img');
@@ -67,10 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
   
-    // Load ramen images on page load
-    loadRamenImages();
   
-    // Handle form submission for new ramen
     newRamenForm.addEventListener('submit', (e) => {
       e.preventDefault();
   
@@ -88,17 +83,13 @@ document.addEventListener('DOMContentLoaded', () => {
         comment
       };
   
-      // Add the new ramen to the ramenData array
       ramenData.push(newRamen);
-  
-      // Reload the images (all images, including the new one, will be displayed)
+
       loadRamenImages();
   
-      // Reset the form
       newRamenForm.reset();
     });
   
-    // Display the first ramen's details by default
     if (ramenData.length > 0) {
       displayRamenDetails(0);
     }
