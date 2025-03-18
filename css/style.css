@@ -23,7 +23,7 @@ header {
   margin: auto;
 }
 
-#ramen {
+#ramen-menu {
   display: flex;
   margin: 1rem 0;
   max-width: 100%;
@@ -32,63 +32,74 @@ header {
   gap: 0.5rem;
 }
 
-#ramen img {
-  height: 150px;
-  width: 150px;
-  object-fit: cover;
-  border-radius: 15px;
-  cursor: pointer;
-  transition: transform 0.3s ease-in-out;
+#ramen-menu img {
+  width: 150px; /* Fixed width */
+  height: 150px; /* Fixed height */
+  object-fit: cover; /* Ensure images cover the area */
+  border-radius: 15px; /* Rounded corners */
+  cursor: pointer; /* Change cursor on hover */
+  transition: transform 0.3s ease-in-out; /* Smooth transition */
 }
 
-#ramen img:hover {
-  animation: float 2s ease-in-out infinite;
+#ramen-menu img:hover {
+  animation: float 2s ease-in-out infinite; /* Up-and-down animation */
 }
 
 @keyframes float {
   0%, 100% {
-    transform: translateY(0);
+    transform: translateY(0); /* Start and end at original position */
   }
   50% {
-    transform: translateY(-10px);
+    transform: translateY(-10px); /* Move up by 10px */
   }
 }
 
-#place {
+#ramen-detail {
   width: 300px;
-  height: 300px;
-  position: relative;
+  height: auto; /* Adjust height to fit content */
   margin: 1rem auto;
+  padding: 1rem;
+  background-color: grey; /* Semi-transparent background */
+  border-radius: 15px;
+  box-shadow: 0 4px 8px ; /* Add a subtle shadow */
+  text-align: center;
 }
 
-#place .holder {
+#ramen-detail .detail-image {
   width: 100%;
-  height: 100%;
+  height: 200px; /* Fixed height for the image */
   object-fit: cover;
   border-radius: 15px;
+  margin-bottom: 1rem; /* Add space below the image */
 }
 
-#place .name,
-#place .restaurant {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  padding: 0.5rem 1rem;
-  background-color: rgba(255, 255, 255, 0.8);
-  text-align: center;
-  width: 90%;
-  border-radius: 5px;
+#ramen-detail .name,
+#ramen-detail .restaurant {
   font-size: 1.2rem;
+  margin: 0.5rem 0; /* Add space between name and restaurant */
 }
 
-#place .name {
-  bottom: 80px;
-  color: green;
+#ramen-detail .name {
+  color: brown;
 }
 
-#place .restaurant {
-  bottom: 20px;
-  color: red;
+#ramen-detail .restaurant {
+  color: blue;
+}
+
+#ramen-detail h3 {
+  margin: 1rem 0 0.5rem; /* Add space above and below headings */
+  font-size: 1.1rem;
+}
+
+#ramen-detail #rating-display,
+#ramen-detail #comment-display {
+  font-size: 1rem;
+  margin: 0.5rem 0; /* Add space between rating and comment */
+}
+
+#ramen-detail #comment-display {
+  font-style: italic; /* Italicize the comment */
 }
 
 form {
@@ -141,33 +152,51 @@ footer {
 }
 
 @media (max-width: 768px) {
-  #ramen img {
-    height: 120px;
+  #ramen-menu img {
     width: 120px;
+    height: 120px;
   }
 
-  .holder {
-    height: 250px;
+  #ramen-detail .detail-image {
+    height: 180px;
   }
 
-  .name,
-  .restaurant {
+  #ramen-detail .name,
+  #ramen-detail .restaurant {
+    font-size: 1.1rem;
+  }
+
+  #ramen-detail h3 {
+    font-size: 1rem;
+  }
+
+  #ramen-detail #rating-display,
+  #ramen-detail #comment-display {
     font-size: 0.9rem;
   }
 }
 
 @media (max-width: 480px) {
-  #ramen img {
-    height: 100px;
+  #ramen-menu img {
     width: 100px;
+    height: 100px;
   }
 
-  .holder {
-    height: 200px;
+  #ramen-detail .detail-image {
+    height: 150px;
   }
 
-  .name,
-  .restaurant {
+  #ramen-detail .name,
+  #ramen-detail .restaurant {
+    font-size: 1rem; 
+  }
+
+  #ramen-detail h3 {
+    font-size: 0.9rem;
+  }
+
+  #ramen-detail #rating-display,
+  #ramen-detail #comment-display {
     font-size: 0.8rem;
   }
 

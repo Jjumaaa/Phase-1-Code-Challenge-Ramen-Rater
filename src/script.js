@@ -1,81 +1,70 @@
-const ramens = [
-    { id: 1, name: "Shoyu Ramen", restaurant: "Ichiran", image: "shoyu.jpg", rating: 5, comment: "Delicious!" },
-    { id: 2, name: "Miso Ramen", restaurant: "Menya", image: "miso.jpg", rating: 4, comment: "Very flavorful!" },
-    { id: 3, name: "Tonkotsu Ramen", restaurant: "Ramen-ya", image: "tonkotsu.jpg" }
-];
-
-
 document.addEventListener('DOMContentLoaded', () => {
 
-    const ramenImages = document.querySelectorAll('#ramen img');
-    const ramenName = document.querySelector('.name');
-    const ramenRestaurant = document.querySelector('.restaurant');
-    const ratingDisplay = document.querySelector('#rating-display');
-    const commentDisplay = document.querySelector('#comment-display');
-    const newRamenForm = document.querySelector('#new-ramen');
-
-    let ramenData = [
-        {
-            name: 'Gyukotsu',
-            restaurant: 'Ichiran',
-            image: 'assets/images/Ramen/gyukotsu.jpg',
-            rating: 8,
-            comment: 'Mouth-watering.',
-        },
-        {
-            name: 'Kojiro',
-            restaurant: 'Menya',
-            image: 'assets/images/Ramen/kojiro.jpg',
-            rating: 6,
-            comment: 'Very flavorful.',
-        },
-        {
-            name: 'Naruto',
-            restaurant: 'Ramen Nagi',
-            image: 'assets/images/Ramen/naruto.jpg',
-            rating: 7,
-            comment: 'Yummy.',
-        },
-        {
-            name: 'Nirvana',
-            restaurant: 'Ramen-ya',
-            image: 'assets/images/Ramen/nirvana.jpg',
-            rating: 8,
-            comment: 'Sweet and tasty.',
-        },
-        {
-            name: 'Shoyu',
-            restaurant: 'Ichiran',
-            image: 'assets/images/Ramen/shoyu.jpg',
-            rating: 9,
-            comment: 'Delicious!',
-        }
+    const ramens = [
+      {
+        name: 'Gyukotsu',
+        restaurant: 'Ichiran',
+        image: 'assets/images/Ramen/gyukotsu.jpg',
+        rating: 8,
+        comment: 'Mouth-watering.',
+      },
+      {
+        name: 'Kojiro',
+        restaurant: 'Menya',
+        image: 'assets/images/Ramen/kojiro.jpg',
+        rating: 6,
+        comment: 'Very flavorful.',
+      },
+      {
+        name: 'Naruto',
+        restaurant: 'Ramen Nagi',
+        image: 'assets/images/Ramen/naruto.jpg',
+        rating: 7,
+        comment: 'Yummy.',
+      },
+      {
+        name: 'Nirvana',
+        restaurant: 'Ramen-ya',
+        image: 'assets/images/Ramen/nirvana.jpg',
+        rating: 8,
+        comment: 'Sweet and tasty.',
+      },
+      {
+        name: 'Shoyu',
+        restaurant: 'Ichiran',
+        image: 'assets/images/Ramen/shoyu.jpg',
+        rating: 9,
+        comment: 'Delicious!',
+      }
     ];
-
-    ramenData = ramenData.concat(ramens.map(ramen => ({
-        name: ramen.name,
-        restaurant: ramen.restaurant,
-        image: ramen.image,
-        rating: ramen.rating,
-        comment: ramen.comment
-    })));
-
-    function displayRamenDetails(index) {
-        const ramen = ramenData[index];
-        ramenName.textContent = ramen.name;
-        ramenRestaurant.textContent = ramen.restaurant;
-        ratingDisplay.textContent = ramen.rating || 'N/A'; 
-        commentDisplay.textContent = ramen.comment || '';  
-        document.querySelector('.holder').src = ramen.image;
+  
+    function displayRamens() {
+      const ramenMenu = document.querySelector('#ramen-menu');
+      ramenMenu.innerHTML = '';
+  
+      ramens.forEach((ramen) => {
+        const img = document.createElement('img');
+        img.src = ramen.image;
+        img.alt = ramen.name;
+        img.addEventListener('click', () => handleClick(ramen));
+        ramenMenu.appendChild(img);
+      });
     }
-
-    ramenImages.forEach((img, index) => {
-        img.addEventListener('click', () => displayRamenDetails(index));
-    });
-
-    newRamenForm.addEventListener('submit', (e) => {
+  
+    function handleClick(ramen) {
+      const ramenDetail = document.querySelector('#ramen-detail');
+      ramenDetail.querySelector('.detail-image').src = ramen.image;
+      ramenDetail.querySelector('.name').textContent = ramen.name;
+      ramenDetail.querySelector('.restaurant').textContent = ramen.restaurant;
+      ramenDetail.querySelector('#rating-display').textContent = ramen.rating || 'N/A';
+      ramenDetail.querySelector('#comment-display').textContent = ramen.comment || '';
+    }
+  
+    function addSubmitListener() {
+      const newRamenForm = document.querySelector('#new-ramen');
+      newRamenForm.addEventListener('submit', (e) => {
         e.preventDefault();
-
+  
         const name = document.querySelector('#new-name').value;
         const restaurant = document.querySelector('#new-restaurant').value;
         const image = document.querySelector('#new-image').value;
@@ -83,29 +72,30 @@ document.addEventListener('DOMContentLoaded', () => {
         const comment = document.querySelector('#new-comment').value;
 
         const newRamen = {
-            name,
-            restaurant,
-            image,
-            rating,
-            comment
+          name,
+          restaurant,
+          image,
+          rating,
+          comment
         };
-
-        ramenData.push(newRamen);
-
-        const newImg = document.createElement('img');
-        newImg.src = newRamen.image;
-        newImg.alt = newRamen.name;
-
-        newImg.addEventListener('click', () => displayRamenDetails(ramenData.length - 1));
-
-        document.querySelector('#ramen').appendChild(newImg);
-
+  
+        ramens.push(newRamen);
+  
+        const ramenMenu = document.querySelector('#ramen-menu');
+        const img = document.createElement('img');
+        img.src = newRamen.image;
+        img.alt = newRamen.name;
+        img.addEventListener('click', () => handleClick(newRamen));
+        ramenMenu.appendChild(img);
+  
         newRamenForm.reset();
-    });
-
-    
-    if (ramenData.length > 0) {
-        displayRamenDetails(0);
+      });
     }
-
-});
+  
+    function main() {
+      displayRamens();
+      addSubmitListener();
+    }
+  
+    main();
+  });
