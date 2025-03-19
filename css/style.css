@@ -33,50 +33,50 @@ header {
 }
 
 #ramen-menu img {
-  width: 150px; /* Fixed width */
-  height: 150px; /* Fixed height */
-  object-fit: cover; /* Ensure images cover the area */
-  border-radius: 15px; /* Rounded corners */
-  cursor: pointer; /* Change cursor on hover */
-  transition: transform 0.3s ease-in-out; /* Smooth transition */
+  width: 150px;
+  height: 150px; 
+  object-fit: cover; 
+  border-radius: 15px;
+  cursor: pointer; 
+  transition: transform 0.3s ease-in-out;
 }
 
 #ramen-menu img:hover {
-  animation: float 2s ease-in-out infinite; /* Up-and-down animation */
+  animation: float 2s ease-in-out infinite;
 }
 
 @keyframes float {
   0%, 100% {
-    transform: translateY(0); /* Start and end at original position */
+    transform: translateY(0); 
   }
   50% {
-    transform: translateY(-10px); /* Move up by 10px */
+    transform: translateY(-10px);
   }
 }
 
 #ramen-detail {
   width: 300px;
-  height: auto; /* Adjust height to fit content */
+  height: auto; 
   margin: 1rem auto;
   padding: 1rem;
-  background-color: grey; /* Semi-transparent background */
+  background-color: grey; 
   border-radius: 15px;
-  box-shadow: 0 4px 8px ; /* Add a subtle shadow */
+  box-shadow: 0 4px 8px ; 
   text-align: center;
 }
 
 #ramen-detail .detail-image {
   width: 100%;
-  height: 200px; /* Fixed height for the image */
+  height: 200px; 
   object-fit: cover;
   border-radius: 15px;
-  margin-bottom: 1rem; /* Add space below the image */
+  margin-bottom: 1rem;
 }
 
 #ramen-detail .name,
 #ramen-detail .restaurant {
   font-size: 1.2rem;
-  margin: 0.5rem 0; /* Add space between name and restaurant */
+  margin: 0.5rem 0;
 }
 
 #ramen-detail .name {
@@ -88,18 +88,18 @@ header {
 }
 
 #ramen-detail h3 {
-  margin: 1rem 0 0.5rem; /* Add space above and below headings */
+  margin: 1rem 0 0.5rem; 
   font-size: 1.1rem;
 }
 
 #ramen-detail #rating-display,
 #ramen-detail #comment-display {
   font-size: 1rem;
-  margin: 0.5rem 0; /* Add space between rating and comment */
+  margin: 0.5rem 0;
 }
 
 #ramen-detail #comment-display {
-  font-style: italic; /* Italicize the comment */
+  font-style: italic;
 }
 
 form {

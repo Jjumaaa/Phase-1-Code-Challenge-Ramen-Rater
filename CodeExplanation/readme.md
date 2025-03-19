@@ -1,7 +1,3 @@
-Got it! Below is a **simplified version** of the `README.md` file, focusing on the **HTML** and **CSS** sections. I'll keep the explanations concise while still covering the key points.
-
----
-
 # Ramen Rater Project
 
 Welcome to the **Ramen Rater** project! This is a simple web application where users can view ramen dishes, click on them to see details, and even add new ramen dishes to the list. Below, I'll explain the **HTML** and **CSS** code in a concise way.
