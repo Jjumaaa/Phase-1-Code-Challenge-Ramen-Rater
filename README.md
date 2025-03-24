@@ -1,6 +1,7 @@
 # Phase-1-Code-Challenge-Ramen-Rater
 
-# Phase 1 Mock Code Challenge: Ramen Rater
+# Phase 1 Mock Code Challenge: Ramen Rater Link
+https://jjumaaa.github.io/Phase-1-Code-Challenge-Ramen-Rater/
 
 ## Learning Goals
 
